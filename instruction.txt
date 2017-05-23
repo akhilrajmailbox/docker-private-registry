@@ -44,35 +44,35 @@ step 1)
 +++++++++
 
 commit the image with registry name
-docker commit -m "message" -p <CONTAINER_ID> dh.vivasa.in:5000/<REPO_NAME>:<TAG_NAME>
+docker commit -m "message" -p <CONTAINER_ID> <<DOMAIN-NAME>>:5000/<REPO_NAME>:<TAG_NAME>
 
 or
 make a tag for existing image with registry name
-docker tag <IMAGE_NAME> dh.vivasa.in:5000/<REPO_NAME>:<TAG_NAME>
+docker tag <IMAGE_NAME> <<DOMAIN-NAME>>:5000/<REPO_NAME>:<TAG_NAME>
 
 +++++++++
 step 2)
 +++++++++
 
-docker login dh.vivasa.in:5000 -u vivasa -p vivasaadmin
+docker login <<DOMAIN-NAME>>:5000 -u USER -p PASSWORD
 
 +++++++++
 step 3)
 +++++++++
 
-docker push dh.vivasa.in:5000/<REPO_NAME>:<TAG_NAME>
+docker push <<DOMAIN-NAME>>:5000/<REPO_NAME>:<TAG_NAME>
 
 
 ===========================================
 to check repo information >>
 ===========================================
 
-curl -v -k http://vivasa:vivasaadmin@dh.vivasa.in:5002/v2/_catalog
+curl -v -k http://USER:PASSWORD@<<DOMAIN-NAME>>:5002/v2/_catalog
 
 ===========================================
 to check tages for images >>
 ===========================================
 
-curl -v -k http://vivasa:vivasaadmin@dh.vivasa.in:5002/v2/<REPO_NAME>/tags/list
+curl -v -k http://USER:PASSWORD@<<DOMAIN-NAME>>:5002/v2/<REPO_NAME>/tags/list
 
 ===========================================

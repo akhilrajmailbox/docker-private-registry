@@ -1,0 +1,155 @@
+
++++++++++++++++++++++++++++++++++++++++++
+docker-compose.yml >>
++++++++++++++++++++++++++++++++++++++++++
+
+dockerauth:
+  image: cesanta/docker_auth
+  hostname: docker-auth
+  container_name: docker-auth
+  ports:
+    - "5001:5001"
+  volumes:
+    - /docker_registry/auth_server/config:/config:ro
+#    - /docker_registry/auth_server/logs:/logs
+    - /docker_registry/auth_server/ssl:/ssl
+  command: /config/auth_config.yml
+  restart: always
+
+registry:
+  image: registry:2
+  hostname: registry
+  container_name: registry
+  ports:
+    - "5000:5000"
+  volumes:
+    - /docker_registry/auth_server/ssl:/ssl
+    - /docker_registry/data:/var/lib/registry
+  restart: always
+  environment:
+    REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /var/lib/registry
+    REGISTRY_AUTH: token
+    REGISTRY_AUTH_TOKEN_REALM: https://IP_ADDRESS:5001/auth
+    REGISTRY_AUTH_TOKEN_SERVICE: "Auth Service"
+    REGISTRY_AUTH_TOKEN_ISSUER: "vivasa"
+    REGISTRY_AUTH_TOKEN_ROOTCERTBUNDLE: /ssl/server.pem
+
+query:
+  image: registry:2
+  hostname: query-server
+  container_name: query-server
+  ports:
+    - 5002:5000
+  environment:
+    REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /var/lib/registry
+    REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+    REGISTRY_AUTH_HTPASSWD_REALM: "Registry Realm"
+    REGISTRY_AUTH: htpasswd
+  volumes:
+    - /docker_registry/data:/var/lib/registry
+    - /docker_registry/auth:/auth
+
+
++++++++++++++++++++++++++++++++++++++++++
+configuration
++++++++++++++++++++++++++++++++++++++++++
+
+mkdir -p /docker_registry/{auth_server/{ssl,config},data,auth}
+
+
+==========================================================
+cat /docker_registry/auth_server/config/auth_config.yml
+==========================================================
+
+server:  # Server settings.
+  # Address to listen on.
+  addr: ":5001"
+  # TLS certificate and key.
+  certificate: "/ssl/server.pem"
+  key: "/ssl/server.key"
+
+token:  # Settings for the tokens.
+  issuer: "vivasa" # Must match issuer in the Registry config.
+  expiration: 900
+
+
+# Static user map.
+# htpasswd -B -n username , then it will ask password type and copy the result in appropriate location
+
+users:
+  # Password is specified as a BCrypt hash. Use htpasswd -B to generate.
+  "vivasa":
+    password: "$2y$05$UwWlP6msTsfDR22IjWe2FezBQHVUuy3qTfLc6ERRBSzVybSInXXYm"
+  "mesaforte":
+    password: "$2y$05$AmyQL493tba856Y0qZ4oAuj5ueQsT1RVvwOBnjuc0wFs/8IHbrXNK"
+  "": {}  # Allow anonymous (no "docker login") access.
+
+acl:
+  # Admin has full access to everything.
+  - match: {account: "vivasa"}
+    actions: ["*"]
+  # User "mesaforte" has pull access.
+  - match: {account: "mesaforte"}
+    actions: ["pull"]
+#  # All logged in users can pull all images.
+#  - match: {account: "/.+/"}
+#    actions: ["pull"]
+#  # Admin can query the catalog.
+#  - match: {account: "vivasa", type: "repository", name: "testing"}
+#    actions: ["*"]
+
+
+==========================================================
+under "/docker_registry/auth_server/ssl" need two files
+==========================================================
+openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout server.key -out server.pem
+
+server.key
+server.pem
+
+==========================================================
+under "/docker_registry/auth" need htpasswd
+==========================================================
+(Password is specified as a BCrypt hash. Use htpasswd -B to generate)
+
+htpasswd -cB htpasswd vivasa
+(i provided the same name as in 'auth_config.yml' who has admin power)
+
+htpasswd
+
+
++++++++++++++++++++++++++++++++++++++++++
+important >>
+htpassword must create with -B option ....no other will supported by docker registry.
++++++++++++++++++++++++++++++++++++++++++
+
+
+client side >>
+
+cat /etc/docker/daemon.json
+
+{
+"insecure-registries": ["192.168.1.106:5000", "192.168.1.106:5002"]
+}
+
+
+
++++++++++++++++++++++++++++++++++++++++++
+links ::
++++++++++++++++++++++++++++++++++++++++++
+
+
+docker-registry with tocken authrntication >>
+https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/
+
+
+catalog access error >>
+https://github.com/cesanta/docker_auth/issues/39
+
+docker registry with htpasswd >>
+http://blog.agilepartner.net/private-docker-registry/
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
+
+
+registry configuration and env >>
+https://docs.docker.com/registry/deploying/#managing-with-compose

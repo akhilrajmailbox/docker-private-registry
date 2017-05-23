@@ -1,0 +1,91 @@
+===========================================
+Docker registry info >>
+===========================================
+
+	domain   :: dh.vivasa.in
+
+admin user ::
+
+	username :: vivasa
+	password :: vivasaadmin
+
+readonly user ::
+
+   username :: mesaforte
+   password :: mesaforteuser
+
+
+push and pull prot :: 5000
+query port         :: 5002
+
+===========================================
+managing registry and nginx container >>
+===========================================
+
+docker-registry ARG
+
+
+ARG >>
+
+  build              Build or rebuild services
+  bundle             Generate a Docker bundle from the Compose file
+  config             Validate and view the compose file
+  create             Create services
+  down               Stop and remove containers, networks, images, and volumes
+  events             Receive real time events from containers
+  kill               Kill containers
+  logs               View output from containers
+  pause              Pause services
+  port               Print the public port for a port binding
+  ps                 List containers
+  pull               Pulls service images
+  push               Push service images
+  restart            Restart services
+  rm                 Remove stopped containers
+  run                Run a one-off command
+  scale              Set number of containers for a service
+  unpause            Unpause services
+  up                 Create and start containers
+
+
+===========================================
+push to repo >>
+===========================================
+
++++++++++
+step 1)
++++++++++
+
+commit the image with registry name
+docker commit -m "message" -p <CONTAINER_ID> dh.vivasa.in:5000/<REPO_NAME>:<TAG_NAME>
+
+or
+make a tag for existing image with registry name
+docker tag <IMAGE_NAME> dh.vivasa.in:5000/<REPO_NAME>:<TAG_NAME>
+
++++++++++
+step 2)
++++++++++
+
+docker login dh.vivasa.in:5000 -u vivasa -p vivasaadmin
+
++++++++++
+step 3)
++++++++++
+
+docker push dh.vivasa.in:5000/<REPO_NAME>:<TAG_NAME>
+
+
+===========================================
+to check repo information >>
+===========================================
+
+curl -v -k http://vivasa:vivasaadmin@dh.vivasa.in:5002/v2/_catalog
+
+===========================================
+to check tages for images >>
+===========================================
+
+curl -v -k http://vivasa:vivasaadmin@dh.vivasa.in:5002/v2/<REPO_NAME>/tags/list
+
+===========================================

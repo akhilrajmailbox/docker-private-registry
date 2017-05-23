@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html class="js" lang="en-US"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script async="" data-rocketsrc="?cf_action=sync_comments&amp;post_id=309" data-rocketoptimized="true"></script><script type="text/javascript" async="" data-rocketsrc="https://ssl.google-analytics.com/ga.js" data-rocketoptimized="true"></script><script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"8e91f07d16f0f23a849151eff279d1e7",petok:"517c8bc7eac701358627089f0eee119fbc5b1dd6-1495012912-1800",zone:"binbashtheory.com",rocket:"a",apps:{}}];document.write('<script type="text/javascript" src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=85b614c0f6/cloudflare.min.js"><'+'\/script>');}}catch(e){};
+//]]>
+</script><script type="text/javascript" src="Docker-Registry-Token-Auth_files/cloudflare.js"></script><style type="text/css">.cf-hidden { display: none; } .cf-invisible { visibility: hidden; }</style><script data-module="cloudflare/rocket" id="cfjs_block_fdf6c3ef31" onload="CloudFlare.__cfjs_block_fdf6c3ef31_load()" onerror="CloudFlare.__cfjs_block_fdf6c3ef31_error()" onreadystatechange="CloudFlare.__cfjs_block_fdf6c3ef31_readystatechange()" type="text/javascript" src="Docker-Registry-Token-Auth_files/rocket.js"></script>
+<link rel="stylesheet" type="text/css" href="Docker-Registry-Token-Auth_files/css.css">
+<link rel="icon" type="image/png" href="https://the.binbashtheory.com/images/favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Docker Registry 2.0 with Token Authentication Service</title>
+<script type="text/rocketscript" data-rocketoptimized="true">document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+ 
+<meta name="description" content="Setting up your own Docker Registry in your production environment, gives you control over the Continuous Integration/Continuous Delivery (CI/CD) workflow.">
+<link rel="canonical" href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/">
+ 
+<link rel="alternate" type="application/rss+xml" title="The /bin/bash Theory » Feed" href="https://the.binbashtheory.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="The /bin/bash Theory » Comments Feed" href="https://the.binbashtheory.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="The /bin/bash Theory » Creating Private Docker Registry 2.0 with Token Authentication Service Comments Feed" href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/feed/">
+<script type="text/rocketscript" data-rocketoptimized="true">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/the.binbashtheory.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.7"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important;}</style>
+<link rel="stylesheet" id="authorsure-css" href="Docker-Registry-Token-Auth_files/public.css" type="text/css" media="all">
+<link rel="stylesheet" id="lingonberry_googleFonts-css" href="Docker-Registry-Token-Auth_files/css_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="lingonberry_style-css" href="Docker-Registry-Token-Auth_files/style.css" type="text/css" media="all">
+ 
+<script type="text/rocketscript" data-rocketoptimized="true">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-56496131-1']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+ 
+<script type="text/rocketscript" data-rocketsrc="//the.binbashtheory.com/wp-includes/js/jquery/jquery.js?ver=1.11.2" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="//the.binbashtheory.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1" data-rocketoptimized="true"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://the.binbashtheory.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://the.binbashtheory.com/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 4.2.7">
+<link rel="shortlink" href="https://the.binbashtheory.com/?p=309">
+ 
+<style type="text/css">body a{color:#232323;}body a:hover{color:#232323;}.header{background:#232323;}.post-bubbles a:hover{background-color:#232323;}.mejs-horizontal-volume-current{background-color:#232323;}.post-nav a:hover{background-color:#232323;}.comment-meta-content cite a:hover{color:#232323;}.comment-meta-content p a:hover{color:#232323;}.comment-actions a:hover{background-color:#232323;}.widget-content .textwidget a:hover{color:#232323;}.widget_archive li a:hover{color:#232323;}.widget_categories li a:hover{color:#232323;}.widget_meta li a:hover{color:#232323;}.widget_nav_menu li a:hover{color:#232323;}.widget_rss .widget-content ul a.rsswidget:hover{color:#232323;}#wp-calendar thead{color:#232323;}.widget_tag_cloud a:hover{background:#232323;}.search-button:hover .genericon{color:#232323;}.flexslider:hover .flex-next:active{color:#232323;}.flexslider:hover .flex-prev:active{color:#232323;}.post-title a:hover{color:#232323;}.post-content a{color:#232323;}.post-content a:hover{color:#232323;}.post-content a:hover{border-bottom-color:#232323;}.post-content fieldset legend{background:#232323;}.post-content input[type="submit"]:hover{background:#232323;}.post-content input[type="button"]:hover{background:#232323;}.post-content input[type="reset"]:hover{background:#232323;}.comment-header h4 a:hover{color:#232323;}.form-submit #submit:hover{background-color:#232323;}</style>
+ 
+ <link rel="icon" href="https://the.binbashtheory.com/wp-content/uploads/2015/10/hashing1.png" type="image/png">
+<style type="text/css" id="custom-background-css">body.custom-background{background-color:#ffffff;}</style>
+<style>.post-content a{color:#4285F4;}</style>
+<script data-rocketsrc="http://the.binbashtheory.com/wp-includes/js/wp-emoji-release.min.js?ver=4.2.7" data-rocketoptimized="true" type="text/javascript"></script><script type="text/javascript" async="" data-rocketsrc="//binbashtheory.disqus.com/embed.js" data-rocketoptimized="true"></script><script async="" type="text/javascript" data-rocketsrc="//binbashtheory.disqus.com/count.js" data-rocketoptimized="true"></script><link rel="prefetch" href="Docker-Registry-Token-Auth_files/a_data/lounge.css"><link rel="prefetch" href="Docker-Registry-Token-Auth_files/a_data/common.js"><link rel="prefetch" href="Docker-Registry-Token-Auth_files/a_data/lounge.js"><link rel="prefetch" href="Docker-Registry-Token-Auth_files/a_data/config.js"><script data-rocketsrc="//binbashtheory.disqus.com/count-data.js?1=309%20http%3A%2F%2Fthe.binbashtheory.com%2F%3Fp%3D309" data-rocketoptimized="true"></script></head>
+<body class="single single-post postid-309 single-format-standard custom-background">
+<div class="navigation">
+<div class="navigation-inner section-inner">
+<ul class="blog-menu">
+<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21"><a href="http://binbashtheory.com/">Bl0g</a></li>
+</ul>
+<form method="get" class="search-form" action="//the.binbashtheory.com/">
+<input value="Type and press enter" onfocus="if(this.value=='Type and press enter')this.value='';" onblur="if(this.value=='')this.value='Type and press enter';" name="s" id="s" type="search">
+<input id="searchsubmit" value="Search" class="button hidden" type="submit">
+</form>
+<div class="clear"></div>
+</div>  
+</div>  
+<div class="header section">
+<div class="header-inner section-inner">
+<a href="http://the.binbashtheory.com/" title="The /bin/bash Theory  | It All Started with the #!/bin/bash" rel="home" class="logo">
+<img src="Docker-Registry-Token-Auth_files/hashing2.png" alt="The /bin/bash Theory">
+</a>
+<h1 class="blog-title">
+<a href="http://the.binbashtheory.com/" title="The /bin/bash Theory — It All Started with the #!/bin/bash" rel="home">The /bin/bash Theory</a>
+</h1>
+<br><br>
+<br><br>
+<br><br>
+<h4 style="text-align:center;color:#FF706C;font-weight:400%;font-size:1.2em;">It All Started With The <strong>#!/bin/bash</strong>...</h4>
+<div class="nav-toggle">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>  
+</div>  
+<div class="content section-inner">
+<div class="posts">
+<div id="post-309" class="post-309 post type-post status-publish format-standard hentry category-devops tag-docker tag-docker-compose tag-registry tag-token-authentication">
+<div class="post-bubbles">
+<a href="http://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/" class="format-bubble" title="Creating Private Docker Registry 2.0 with Token Authentication Service"></a>
+</div>
+<div class="content-inner">
+<div class="post-header">
+<h2 class="post-title entry-title"><a href="http://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/" rel="bookmark" title="Creating Private Docker Registry 2.0 with Token Authentication Service">Creating Private Docker Registry 2.0 with Token Authentication Service</a></h2>
+<div class="post-meta">
+<span class="post-date date updated"><a href="http://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/" title="1:35 am">July 15, 2015</a></span>
+<span class="date-sep"> / </span>
+<span class="vcard author">
+<span class="fn"><a href="http://the.binbashtheory.com/author/hussein-galal/" title="Posts by Hussein Galal" rel="author">Hussein Galal</a></span>
+</span>
+<span class="date-sep"> / </span>
+<a href="http://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#disqus_thread" data-disqus-identifier="309 http://the.binbashtheory.com/?p=309">18 Comments</a>
+</div>  
+</div>  
+<div class="post-content">
+<p>Docker Registry is a stateless server-side application that can act 
+as a central repository for Docker images, Docker has its own free to 
+use central registry called <a href="https://hub.docker.com/" target="_blank">Docker Hub</a>.</p>
+<p>Setting up your own Docker Registry in your production environment, 
+gives you control over what image being stored and control over the 
+Continuous Integration/Continuous Delivery (CI/CD) workflow, where you 
+can push changes to the source control repo, then the CI tool of your 
+choice pulls the image from your <strong>private Registry</strong>, run 
+the tests and then build the image and push it to the private registry, 
+then a Docker API will be triggered to deploy the new image into 
+production.</p>
+<p><span id="more-309"></span>In this post i am going to setup a private
+ Docker registry with centralized authentication server, using this 
+method can give you more access control over the users and the Docker 
+images being stored.</p>
+<h1>Docker Registry 2.0</h1>
+<p>Registry 2.0 offers faster push and pull&nbsp;of images and has a new
+ API implementation, the new version also has number of cool new 
+features like a pluggable storage backend and webhook notifications.</p>
+<p>Registry 2.0 offers also a new native authentication mechanism using 
+JWT tokens, and simplify the authentication processes by eliminating the
+ excessive communication part between the registry and the 
+authentication server, and depend on cryptographically&nbsp;signed 
+token.</p>
+<p>As described in the fully detailed <a href="https://docs.docker.com/registry/spec/auth/token/" target="_blank">documentation</a> of Docker authentication by token, the authentication process can be described in 6 steps:</p>
+<p><img class=" wp-image-325 aligncenter" src="Docker-Registry-Token-Auth_files/registry-token.png" alt="Docker's Documentation" height="367" width="478"></p>
+<ol>
+<li>The Docker client tries to push/pull from the registry.</li>
+<li>The Registry will send him a 401 Unauthorized response&nbsp;if he is
+ not authenticated , with information on how to authenticate with the 
+auth server.</li>
+<li>&nbsp;The client send a request for a Json Web Token from the authorization service.</li>
+<li>The authorization service returns the token.</li>
+<li>The client tries to reconnect to the registry but this time with the token in the Authorization header.</li>
+<li>The registry authorize the client and continue the operation.</li>
+</ol>
+<p>Lets breakdown these steps into understandable points:</p>
+<h3>Step #1 &nbsp;Client connection to the registry</h3>
+<p>The Docker client will try to connect to the Docker registry server to perform pull/push operation, using <strong>docker push</strong> or <strong>docker pull</strong> commands.</p>
+<p>Note that when trying to access a remote Docker registry, you 
+required to use tls to authenticate with the registry, or else you will 
+get the following error:</p>
+<pre>FATA[0000] Error response from daemon: v1 ping attempt failed with error:
+Get https://registry.example.com:5000/v1/_ping: tls: oversized record received with length 20527. 
+If this private registry supports only HTTP or HTTPS with an unknown CA certificate,please add 
+`--insecure-registry registry.example.com:5000` to the daemon's arguments.
+In the case of HTTPS, if you have access to the registry's CA certificate, no need for the flag;
+simply place the CA certificate at /etc/docker/certs.d/registry.example.com:5000/ca.crt
+</pre>
+<p>To overcome this issue, you can either buy a certificate for your 
+domain or use self signed certificate, or as we will do in this example 
+start docker with the following option:</p>
+<pre>--insecure-registry registry.example.com:5000
+</pre>
+<h3>Step #2 Unauthorized response</h3>
+<p>The registry server will respond with 401 Unauthorized code, and information about the Authentication endpoint:</p>
+<pre>$ curl https://registry.example.com:5000/v2 -k -IL
+HTTP/1.1 301 Moved Permanently
+Docker-Distribution-Api-Version: registry/2.0
+Location: /v2/
+Date: Tue, 14 Jul 2015 23:00:43 GMT
+Content-Type: text/plain; charset=utf-8
+
+<span style="background-color: #fde7ce;">HTTP/1.1 401 Unauthorized</span>
+Content-Type: application/json; charset=utf-8
+Docker-Distribution-Api-Version: registry/2.0
+Www-Authenticate: Bearer realm="https://auth.example.com:5001/auth",service="Docker registry"
+Date: Tue, 14 Jul 2015 23:00:43 GMT
+Content-Length: 114</pre>
+<p>The authentication response header contain information on how to 
+request a token from the authorization end point, it consists of 
+important query parameters:</p>
+<p><strong><span style="background-color: #fde7ce;">realm:</span></strong> describe the authorization endpoint.</p>
+<pre>realm="https://auth.example.com:5001/auth"</pre>
+<p><strong><span style="background-color: #fde7ce;">service:</span></strong> describe the name of the service that hold the resources.</p>
+<pre>service="Docker registry"</pre>
+<p><strong><span style="background-color: #fde7ce;">scope:</span></strong> which describe the resources that needed to be accessed,and the operation requested by the client (pulled/pushed).</p>
+<pre>scope="repository:husseingalal/hello:push"</pre>
+<p><strong><span style="background-color: #fde7ce;">account:</span></strong> an optional attribute which describes the account used for authentication.</p>
+<pre>account=admin</pre>
+<h3>Step #3,4 Authentication endpoint communication</h3>
+<p>These two steps describe the communication between the client and the
+ authorization endpoint, the detailed process is described in the <a href="https://docs.docker.com/registry/spec/auth/token/" target="_blank">documentation</a>,
+ but all you need to know that the client sends the request to the 
+authentication server for a signed (a self signed certificate) token, 
+the request will contain the basic authentication information for the 
+requested account which will be matched against the auth server’s user 
+list, if authorized, a token will be generated with information about 
+the user’s allowed scope of resources and will be signed by the server’s
+ key, and the token returned back to the client.</p>
+<h3>Step #5,6 Final communication</h3>
+<p>The client tries to connect to the registry, but with the signed 
+token this time, the registry authorize the token for a given period, 
+and start the pull or push operation.</p>
+<h1>Starting the Registry and Authentication servers</h1>
+<p>I fired up a machine on DO with docker 1.7 installed, then started an authentication server <a href="https://registry.hub.docker.com/u/cesanta/docker_auth/" target="_blank">container</a>, developed by&nbsp;<a href="http://www.cesanta.com/">Cesanta Software Ltd</a>, a nice implementation which uses either a static user list for authentication or using Google Sign-In.</p>
+<p>I created two directories one for the authentication and one for the 
+registry those dirs contain the configuration and datadir which will be 
+used by the two containers later:</p>
+<pre>auth_server/
+├── config
+│ &nbsp; └── auth_config.yml
+└── ssl
+&nbsp; &nbsp; ├── server.key
+&nbsp; &nbsp; └── server.pem
+docker_registry/
+└── data/
+</pre>
+<p>The certificate is a self signed certificate:</p>
+<pre>$ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.pem</pre>
+<p>The data directory is where the Docker images will be stored when 
+push to the registry, to start the authentication container, run the 
+following:</p>
+<pre>docker run -d --name docker_auth -p 5001:5001 \
+-v `pwd`/auth_server/config:/config:ro \
+-v /var/log/docker_auth:/logs \
+--restart=always \
+-v `pwd`/auth_server/ssl:/ssl cesanta/docker_auth /config/auth_config.yml</pre>
+<p>The auth_config.yml will be something like that:</p>
+<pre>server:  <span style="color: #808080;"># Server settings.</span>
+  <span style="color: #808080;"># Address to listen on.</span>
+  addr: ":5001"
+  <span style="color: #808080;"># TLS certificate and key.</span>
+  certificate: "/ssl/server.pem"
+  key: "/ssl/server.key"
+
+token:  <span style="color: #808080;"># Settings for the tokens.</span>
+  issuer: "Auth Service"  <span style="color: #808080;"># Must match issuer in the Registry</span> config.
+  expiration: 900
+
+
+<span style="color: #808080;"># Static user map.</span> 
+users:
+  <span style="color: #808080;"># Password is specified as a BCrypt hash. Use htpasswd -B to generate.</span>
+  "admin":
+    password: "$2y$05$B.x046DV3bvuwFgn0I42F.W/SbRU5fUoCbCGtjFl7S33aCUHNBxbq"
+  "hussein":
+    password: "$2y$05$xN3hNmNlBIYpST7UzqwK/O5T1/JyXDGuJgKJzf4XuILmvX7L5ensa"
+  "": {}  <span style="color: #808080;"># Allow anonymous (no "docker login") access.</span>
+
+acl:
+  <span style="color: #808080;"># Admin has full access to everything.</span>
+  <span style="color: #000080;">- match: {account: "admin"}
+    actions: ["*"]</span>
+  <span style="color: #808080;"># User "test" has full access to ubuntu image but nothing else.</span>
+  <span style="color: #000080;">- match: {account: "hussien", name: "ubuntu"}
+    actions: ["*"]
+  - match: {account: "test"}
+    actions: []</span>
+  <span style="color: #808080;"># All logged in users can pull all images.</span>
+  <span style="color: #000080;">- match: {account: "/.+/"}
+    actions: ["pull"]</span>
+  <span style="color: #808080;"># Anonymous users can pull "hello-world".</span>
+ <span style="color: #000080;"> - match: {account: "", name: "hello-world"}
+    actions: ["pull"]</span>
+  <span style="color: #808080;"># Access is denied by default.
+</span></pre>
+<p>For more information about the configuration options for this authentication server, refer to the <a href="https://github.com/cesanta/docker_auth" target="_blank">Github repo</a>.</p>
+<p>The configuration of the registry is a little tricky, to pass a 
+configuration to the registry:2 container you required to pass as 
+environment variable with prefix “REGISTRY_variable” where variable is 
+the configuration option for a particular section, for example if you 
+want to configure this option:</p>
+<pre>auth:
+  token:
+    issuer: "Auth Service"
+</pre>
+<p>It will look like that:</p>
+<pre>REGISTRY_AUTH_TOKEN_ISSUER="Auth Service"
+</pre>
+<p>To configure the registry to use the token mechanism, you should configure the following options:</p>
+<p>auth:<br>
+token:<br>
+<span style="background-color: #fde7ce;"><strong>realm</strong></span>: The authentication end point.<br>
+<span style="background-color: #fde7ce;"><strong>service</strong></span>: The service name.<br>
+<span style="background-color: #fde7ce;"><strong>issuer</strong></span>: The issuer of the request, must match the issuer in the authentication service configuration.<br>
+<span style="background-color: #fde7ce;"><strong>rootcertbundle</strong></span>: The certificate bundle which its public key used to sign the token.</p>
+<p>So now if we want to run the registry container:</p>
+<pre>$ docker run -d -p 5000:5000 \
+-e REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY=/var/lib/registry \
+-e REGISTRY_AUTH=token \
+-e REGISTRY_AUTH_TOKEN_REALM=https://registry.example.com:5001/auth \
+-e REGISTRY_AUTH_TOKEN_SERVICE="Docker registry" \
+-e REGISTRY_AUTH_TOKEN_ISSUER="Auth Service" \
+-e REGISTRY_AUTH_TOKEN_ROOTCERTBUNDLE=/ssl/server.pem \
+-v /root/auth_server/ssl:/ssl \
+-v /root/docker_registry/data:/var/lib/registry \
+--restart=always \
+--name registry registry:2
+</pre>
+<h1>Using Docker Compose</h1>
+<p>You can use docker-compose tool to start the containers knowing that 
+the directory structure for the certificate and the configuration is 
+correct:</p>
+<pre>dockerauth:
+  image: cesanta/docker_auth
+  ports:
+    - "5001:5001"
+  volumes:
+    - /root/auth_server/config:/config:ro
+    - /var/log/docker_auth:/logs
+    - /root/auth_server/ssl:/ssl
+  command: /config/auth_config.yml
+  restart: always
+
+registry:
+  image: registry:2
+  ports:
+    - "5000:5000"
+  volumes:
+    - /root/auth_server/ssl:/ssl
+    - /root/docker_registry/data:/var/lib/registry
+  restart: always
+  environment:
+    - REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY=/var/lib/registry
+    - REGISTRY_AUTH=token
+    - REGISTRY_AUTH_TOKEN_REALM=https://auth.example.com:5001/auth
+    - REGISTRY_AUTH_TOKEN_SERVICE="Docker registry"
+    - REGISTRY_AUTH_TOKEN_ISSUER="Auth Service"
+    - REGISTRY_AUTH_TOKEN_ROOTCERTBUNDLE=/ssl/server.pem
+</pre>
+<pre># docker-compose up 
+Recreating root_dockerauth_1...
+Recreating root_registry_1...
+Attaching to root_dockerauth_1, root_registry_1
+<span style="color: #993300;">registry_1   |</span> 
+time="2015-07-15T00:49:59.002496717Z" level=info msg="endpoint 
+local-8082 disabled, skipping" environment=development 
+instance.id=8bc4349b-bd13-493c-ada0-bd0a189d588f service=registry 
+version=v2.0.1 
+<span style="color: #993300;">registry_1   |</span> 
+time="2015-07-15T00:49:59.003016967Z" level=info msg="endpoint 
+local-8083 disabled, skipping" environment=development 
+instance.id=8bc4349b-bd13-493c-ada0-bd0a189d588f service=registry 
+version=v2.0.1 
+<span style="color: #993300;">registry_1   |</span> 
+time="2015-07-15T00:49:59.003610408Z" level=info msg="using inmemory 
+layerinfo cache" environment=development 
+instance.id=8bc4349b-bd13-493c-ada0-bd0a189d588f service=registry 
+version=v2.0.1 
+<span style="color: #993300;">registry_1   |</span> 
+time="2015-07-15T00:49:59.004509704Z" level=info msg="listening on 
+:5000" environment=development 
+instance.id=8bc4349b-bd13-493c-ada0-bd0a189d588f service=registry 
+version=v2.0.1  
+
+</pre>
+<p>As mentioned in the configuration the user hussein only has access on
+ the ubuntu image, so lets try to push another container other than 
+ubuntu image:</p>
+<pre>$ docker login registry.example.com:5000
+Username: hussein
+Password: *******
+Email: 
+WARNING: login credentials saved in /root/.docker/config.json
+Login Succeeded
+
+$ docker pull fedora
+$ docker tag fedora registry.example.com:5000/fedora
+$ docker push registry.example.com:5000/fedora
+The push refers to a repository [registry.example.com/fedora] (len: 1)
+ded7cd95e059: Image push failed 
+Error pushing to registry: token auth attempt for registry 
+http://registry.example.com:5000/v2/: 
+https://auth.example.com:5001/auth?account=kevin&amp;scope=repository%3Afedora%3Apull%2Cpush&amp;service=Docker+registry
+ request failed with status: 403 Forbidden
+</pre>
+<p>But when we try to push the ubuntu image</p>
+<pre>$ docker pull ubuntu
+$ docker tag ubuntu registry.example.com:5000/ubuntu
+$ docker push registry.example.com:5000/ubuntu
+The push refers to a repository [registry.example.com/ubuntu] (len: 1)
+d2a0ecffe6fa: Image already exists 
+29460ac93442: Image successfully pushed 
+b670fb0c7ecd: Image successfully pushed 
+83e4dde6b9cf: Image successfully pushed 
+Digest: sha256:ec4bf98e38b87b91f239db1643d210bac0da5b87c0f5b294268a0d4664d6adfc
+</pre>
+<h2>References:</h2>
+<ul>
+<li><a href="https://docs.docker.com/registry/spec/auth/token/" target="_blank">https://docs.docker.com/registry/spec/auth/token/</a></li>
+<li><a href="https://docs.docker.com/registry/" target="_blank">https://docs.docker.com/registry/</a></li>
+<li><a href="https://tools.ietf.org/html/rfc6750#section-3" target="_blank">https://tools.ietf.org/html/rfc6750#section-3</a></li>
+<li><a href="https://github.com/cesanta/docker_auth/blob/master/README.md" target="_blank">https://github.com/cesanta/docker_auth/blob/master/README.md</a></li>
+<li><a href="https://docs.docker.com/registry/configuration/" target="_blank">https://docs.docker.com/registry/configuration/</a></li>
+</ul>
+<p>&nbsp;</p>
+</div>  
+<div class="clear"></div>
+<div class="post-cat-tags">
+<p class="post-categories">Categories: <a href="http://the.binbashtheory.com/category/devops/" rel="category tag">DevOps</a></p>
+<p class="post-tags">Tags: <a href="http://the.binbashtheory.com/tag/docker/" rel="tag">Docker</a>, <a href="http://the.binbashtheory.com/tag/docker-compose/" rel="tag">docker-compose</a>, <a href="http://the.binbashtheory.com/tag/registry/" rel="tag">Registry</a>, <a href="http://the.binbashtheory.com/tag/token-authentication/" rel="tag">Token-authentication</a></p>
+</div>
+</div>  
+<div class="clear"></div>
+<div class="post-nav">
+<a class="post-nav-newer" title="Next post: Running a Scalable Application on Kubernetes and AWS" href="http://the.binbashtheory.com/running-a-scalable-application-on-kubernetes-and-aws/">Running a Scalable Application on Kubernetes and AWS »</a>
+<a class="post-nav-older" title="Previous post: Using Ansible with DigitalOcean" href="http://the.binbashtheory.com/using-ansible-with-digitalocean/">« Using Ansible with DigitalOcean</a>
+<div class="clear"></div>
+</div>  
+<div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1150px; min-width: 100% ! important; border: medium none ! important; overflow: hidden ! important; height: 3678px ! important;" src="Docker-Registry-Token-Auth_files/a.html" horizontalscrolling="no" verticalscrolling="no" data-origwidth="100%" frameborder="0" width="100%"></iframe></div>
+</div>  
+</div>  
+</div>  
+<div class="footer section">
+<div class="footer-inner section-inner">
+<div class="footer-a widgets">
+<div class="widget widget_search"><div class="widget-content"><form method="get" class="search-form" action="//the.binbashtheory.com/">
+<input value="Type and press enter" onfocus="if(this.value=='Type and press enter')this.value='';" onblur="if(this.value=='')this.value='Type and press enter';" name="s" id="s" type="search">
+<input id="searchsubmit" value="Search" class="button hidden" type="submit">
+</form></div><div class="clear"></div></div>
+<div class="clear"></div>
+</div>
+ 
+<div class="footer-b widgets">
+<div class="widget widget_tag_cloud"><div class="widget-content"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="http://the.binbashtheory.com/tag/ansible/" class="tag-link-16" title="2 topics" style="font-size: 12.581818181818pt;">Ansible</a>
+<a href="http://the.binbashtheory.com/tag/aws/" class="tag-link-31" title="1 topic" style="font-size: 8pt;">AWS</a>
+<a href="http://the.binbashtheory.com/tag/backup/" class="tag-link-19" title="1 topic" style="font-size: 8pt;">Backup</a>
+<a href="http://the.binbashtheory.com/tag/bash/" class="tag-link-18" title="1 topic" style="font-size: 8pt;">Bash</a>
+<a href="http://the.binbashtheory.com/tag/cgroups/" class="tag-link-11" title="2 topics" style="font-size: 12.581818181818pt;">cgroups</a>
+<a href="http://the.binbashtheory.com/tag/clustering/" class="tag-link-34" title="1 topic" style="font-size: 8pt;">Clustering</a>
+<a href="http://the.binbashtheory.com/tag/devops/" class="tag-link-33" title="1 topic" style="font-size: 8pt;">DevOps</a>
+<a href="http://the.binbashtheory.com/tag/digitalocean/" class="tag-link-22" title="1 topic" style="font-size: 8pt;">DigitalOcean</a>
+<a href="http://the.binbashtheory.com/tag/docker/" class="tag-link-7" title="6 topics" style="font-size: 22pt;">Docker</a>
+<a href="http://the.binbashtheory.com/tag/docker-compose/" class="tag-link-29" title="1 topic" style="font-size: 8pt;">docker-compose</a>
+<a href="http://the.binbashtheory.com/tag/fig/" class="tag-link-15" title="1 topic" style="font-size: 8pt;">Fig</a>
+<a href="http://the.binbashtheory.com/tag/glusterfs/" class="tag-link-32" title="1 topic" style="font-size: 8pt;">Glusterfs</a>
+<a href="http://the.binbashtheory.com/tag/kubernetes/" class="tag-link-30" title="1 topic" style="font-size: 8pt;">Kubernetes</a>
+<a href="http://the.binbashtheory.com/tag/linux/" class="tag-link-10" title="1 topic" style="font-size: 8pt;">Linux</a>
+<a href="http://the.binbashtheory.com/tag/lxc/" class="tag-link-8" title="3 topics" style="font-size: 15.636363636364pt;">LXC</a>
+<a href="http://the.binbashtheory.com/tag/mysql/" class="tag-link-14" title="1 topic" style="font-size: 8pt;">MySQL</a>
+<a href="http://the.binbashtheory.com/tag/nginx/" class="tag-link-13" title="1 topic" style="font-size: 8pt;">Nginx</a>
+<a href="http://the.binbashtheory.com/tag/overlayfs/" class="tag-link-12" title="1 topic" style="font-size: 8pt;">Overlayfs</a>
+<a href="http://the.binbashtheory.com/tag/registry/" class="tag-link-27" title="1 topic" style="font-size: 8pt;">Registry</a>
+<a href="http://the.binbashtheory.com/tag/s3/" class="tag-link-20" title="1 topic" style="font-size: 8pt;">S3</a>
+<a href="http://the.binbashtheory.com/tag/s3cmd/" class="tag-link-21" title="1 topic" style="font-size: 8pt;">s3cmd</a>
+<a href="http://the.binbashtheory.com/tag/token-authentication/" class="tag-link-28" title="1 topic" style="font-size: 8pt;">Token-authentication</a>
+<a href="http://the.binbashtheory.com/tag/vagrant/" class="tag-link-17" title="1 topic" style="font-size: 8pt;">Vagrant</a></div>
+</div><div class="clear"></div></div>
+<div class="clear"></div>
+</div>
+ 
+<div class="footer-c widgets">
+<div class="widget widget_recent_entries"><div class="widget-content"> <h3 class="widget-title">Recent Posts</h3> <ul>
+<li>
+<a href="http://the.binbashtheory.com/running-a-scalable-application-on-kubernetes-and-aws/">Running a Scalable Application on Kubernetes and AWS</a>
+</li>
+<li>
+<a href="http://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/">Creating Private Docker Registry 2.0 with Token Authentication Service</a>
+</li>
+<li>
+<a href="http://the.binbashtheory.com/using-ansible-with-digitalocean/">Using Ansible with DigitalOcean</a>
+</li>
+<li>
+<a href="http://the.binbashtheory.com/amazon-s3-automated-backups/">Amazon S3 Automated Backups</a>
+</li>
+<li>
+<a href="http://the.binbashtheory.com/vagrant-php-development-box-ansible/">Vagrant PHP Development Box With Ansible</a>
+</li>
+</ul>
+</div><div class="clear"></div></div>
+<div class="clear"></div>
+</div>
+ 
+<div class="clear"></div>
+</div>  
+</div>  
+<div class="credits section">
+<div class="credits-inner section-inner">
+<p class="credits-left">
+<span>Copyright</span> <img src="Docker-Registry-Token-Auth_files/creative9.png" alt="Smiley face" height="13" width="13"> 2017 <a href="http://the.binbashtheory.com/" title="The /bin/bash Theory">The /bin/bash Theory</a>
+</p>
+<p class="credits-right">
+<a title="To the top" class="tothetop">Up ↑</a>
+</p>
+<div class="clear"></div>
+</div>  
+</div>  
+<script type="text/rocketscript" data-rocketsrc="//the.binbashtheory.com/wp-includes/js/comment-reply.min.js?ver=4.2.7" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="//the.binbashtheory.com/wp-content/themes/lingonberry/js/flexslider.min.js?ver=4.2.7" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="//the.binbashtheory.com/wp-content/themes/lingonberry/js/mediaelement-and-player.min.js?ver=4.2.7" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="//the.binbashtheory.com/wp-content/themes/lingonberry/js/global.js?ver=4.2.7" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketoptimized="true">
+/* <![CDATA[ */
+var embedVars = 
+{"disqusConfig":{"platform":"wordpress@4.2.7","language":""},"disqusIdentifier":"309
+ 
+http:\/\/the.binbashtheory.com\/?p=309","disqusShortname":"binbashtheory","disqusTitle":"Creating
+ Private Docker Registry 2.0 with Token Authentication 
+Service","disqusUrl":"http:\/\/the.binbashtheory.com\/creating-private-docker-registry-2-0-with-token-authentication-service\/","options":{"manualSync":false},"postId":"309"};
+/*
+ ]]> */
+</script>
+<script type="text/rocketscript" data-rocketsrc="//the.binbashtheory.com/wp-content/plugins/disqus-comment-system/media/js/disqus.js?ver=4.2.7" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketoptimized="true">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"binbashtheory"};
+/* ]]> */
+</script>
+<script type="text/rocketscript" data-rocketsrc="//the.binbashtheory.com/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=4.2.7" data-rocketoptimized="true"></script>
+
+<iframe style="display: none; width: 1352px;"></iframe></body></html>

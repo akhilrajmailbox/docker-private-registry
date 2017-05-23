@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" dir="ltr" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" dir="ltr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html dir="ltr" class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        .alert--warning {
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #FFE070;
+            color: #A47703;
+        }
+
+        .alert--warning a,
+        .alert--warning a:hover,
+        .alert--warning strong {
+            color: #A47703;
+            font-weight: bold;
+        }
+
+        .alert--error p,
+        .alert--warning p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        </style>
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        #error {
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        
+    </style>
+
+<script src="a_data/cbgapi.loaded_0" async=""></script><script crossorigin="anonymous" id="bootstrap-script" data-app="lounge" src="a_data/lounge_002.js"></script><meta http-equiv="Content-Security-Policy" content="script-src https:;"><link rel="stylesheet" href="a_data/lounge.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lounge/main" src="a_data/lounge.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="remote/config" src="a_data/config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ga" src="a_data/ga.js"></script><style id="css_1495013826057"></style><!-- base href="https://disqus.com/embed/comments/?base=default&f=binbashtheory&t_i=309%20http%3A%2F%2Fthe.binbashtheory.com%2F%3Fp%3D309&t_u=http%3A%2F%2Fthe.binbashtheory.com%2Fcreating-private-docker-registry-2-0-with-token-authentication-service%2F&t_e=Creating%20Private%20Docker%20Registry%202.0%20with%20Token%20Authentication%20Service&t_d=Docker%20Registry%202.0%20with%20Token%20Authentication%20Service&t_t=Creating%20Private%20Docker%20Registry%202.0%20with%20Token%20Authentication%20Service&s_o=default&l=" --><link rel="stylesheet" href="a_data/discovery.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="discovery/main" src="a_data/discovery.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="fb" src="a_data/sdk.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="gapi" src="a_data/api.js" gapi_processed="true"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body>
+    
+
+    
+    <div id="error" class="alert--error">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"features":{},"forum":{"raw_guidelines":null,"twitterName":"","guidelines":null,"favicon":{"permalink":"https://disqus.com/api/forums/favicons/binbashtheory.jpg","cache":"//a.disquscdn.com/1494469450/images/favicon-default.png"},"disableDisqusBranding":false,"id":"binbashtheory","createdAt":"2014-11-10T14:40:04.174167","category":"Tech","founder":"130761916","daysAlive":0,"installCompleted":true,"pk":"3304967","channel":null,"description":"","raw_description":"","permissions":{},"name":"binbashtheory","language":"en","settings":{"supportLevel":0,"adsDRNativeEnabled":false,"colorScheme":"auto","adsVideoEnabled":false,"adsProductVideoEnabled":false,"adsPositionTopEnabled":false,"ssoRequired":false,"unapproveLinks":false,"adsEnabled":false,"adsProductLinksThumbnailsEnabled":false,"adsProductStoriesEnabled":false,"organicDiscoveryEnabled":true,"allowMedia":true,"disable3rdPartyTrackers":false,"adsProductDisplayEnabled":false,"discoveryMax":false,"discoveryLocked":false,"moderatorText":"","linkAffiliationEnabled":false,"allowAnonPost":false,"hasCustomAvatar":false,"adultContent":false,"promotedDiscoveryEnabled":false,"allowAnonVotes":false,"mustVerify":true,"adsSettingsLocked":false,"mustVerifyEmail":true,"audienceSyncEnabled":false,"typeface":"auto","adsPositionBottomEnabled":false,"mediaembedEnabled":true,"adsProductLinksEnabled":false,"validateAllPosts":false,"discoveryThumbnailsEnabled":false,"isVIP":false,"adsPositionInthreadEnabled":false},"organizationId":2435925,"url":"http://the.binbashtheory.com","daysThreadAlive":0,"avatar":{"small":{"permalink":"https://disqus.com/api/forums/avatars/binbashtheory.jpg?size=32","cache":"//a.disquscdn.com/1494469450/images/noavatar32.png"},"large":{"permalink":"https://disqus.com/api/forums/avatars/binbashtheory.jpg?size=92","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png"}},"signedUrl":"http://disq.us/?url=http%3A%2F%2Fthe.binbashtheory.com&key=fuA7fvzM6k1y73I_kWhV6w"}}</script>
+
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":18,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1493854693,"posts":[{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>I have the same problem as Claudio, cannot get anonymous user to be able to query the catalog. Even if I set my acl to give anonymous users full access to everything:\u003cbr>  - match: {account: \"\"}\u003cbr>    actions: [\"*\"]\u003c/p>\u003cp>It still fails.\u003c/p>","id":"3287621792","isHighlighted":false,"author":{"username":"disqus_3dJ0FwY0YG","about":"","name":"Alex Moore","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/disqus_3dJ0FwY0YG/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2017-05-03T23:36:23","id":"250812334","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_3dJ0FwY0YG.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/disqus_3dJ0FwY0YG.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_3dJ0FwY0YG.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2017-05-03T23:38:13","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"I have the same problem as Claudio, cannot get anonymous user to be able to query the catalog. Even if I set my acl to give anonymous users full access to everything:\n  - match: {account: \"\"}\n    actions: [\"*\"]\n\nIt still fails.","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Be careful with the --insecure-registry example. It's great for testing, but with proliferation of LetsEncrypt and the idea that basic SSL should be provided for free, it might be a nice time to update this.\u003c/p>","id":"3029082845","isHighlighted":false,"author":{"username":"lewiscowles","about":"Developer, Marketer, Business Owner Hybrid","name":"Lewis Cowles","disable3rdPartyTrackers":false,"url":"https://www.lewiscowles.co.uk/","isAnonymous":false,"profileUrl":"https://disqus.com/by/lewiscowles/","isPowerContributor":false,"location":"London, UK","isPrivate":true,"signedUrl":"https://disq.us/?url=https%3A%2F%2Fwww.lewiscowles.co.uk%2F&key=i08xSEqO7k3yVkBFzn01TA","isPrimary":true,"joinedAt":"2013-05-19T20:44:31","id":"51258486","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/lewiscowles.jpg","cache":"https://c.disquscdn.com/uploads/users/5125/8486/avatar32.jpg?1495002318"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/lewiscowles.jpg","cache":"https://c.disquscdn.com/uploads/users/5125/8486/avatar92.jpg?1495002318","large":{"permalink":"https://disqus.com/api/users/avatars/lewiscowles.jpg","cache":"https://c.disquscdn.com/uploads/users/5125/8486/avatar92.jpg?1495002318"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-12-01T07:20:44","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Be careful with the --insecure-registry example. It's great for testing, but with proliferation of LetsEncrypt and the idea that basic SSL should be provided for free, it might be a nice time to update this.","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>I am running into some problems following this setup using the docker compose.\u003cbr>The registry and auth part are both running but when i try to log in, i get the following error:\u003cbr>&lt; HTTP/1.1 404 Not Found\u003cbr>&lt; Content-Type: text/plain; charset=utf-8\u003cbr>&lt; X-Content-Type-Options: nosniff\u003cbr>&lt; Date: Wed, 19 Oct 2016 10:18:57 GMT\u003cbr>&lt; Content-Length: 10\u003c/p>\u003cp>I have no idea why this problem keeps ocurring.\u003c/p>","id":"2958025041","isHighlighted":false,"author":{"username":"disqus_1Kox1iXjkO","about":"","name":"Hans","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/disqus_1Kox1iXjkO/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2016-10-19T09:22:57","id":"227023155","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_1Kox1iXjkO.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/disqus_1Kox1iXjkO.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_1Kox1iXjkO.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-10-19T09:24:15","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"I am running into some problems following this setup using the docker compose.\nThe registry and auth part are both running but when i try to log in, i get the following error:\n\u003c HTTP/1.1 404 Not Found\n\u003c Content-Type: text/plain; charset=utf-8\n\u003c X-Content-Type-Options: nosniff\n\u003c Date: Wed, 19 Oct 2016 10:18:57 GMT\n\u003c Content-Length: 10\n\nI have no idea why this problem keeps ocurring.","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hello, very good article. Thanks.\u003cbr>I have a question.\u003cbr>I added the following rule in the auth config file:\u003c/p>\u003cp>  - match: {account: \"\", type: \"registry\", name: \"catalog\"}\u003cbr>    actions: [\"*\"]\u003cbr>    comment: \"Logged in users can query the catalog.\"\u003c/p>\u003cp>I copied from the example in: \u003ca href=\"https://disq.us/url?url=https%3A%2F%2Fgithub.com%2Fcesanta%2Fdocker_auth%2Fblob%2Fmaster%2Fexamples%2Freference.yml%3A_CPWbXNSnBvNDAy8IJUVwIjf6aE&amp;cuid=3304967\" rel=\"nofollow noopener\">https://github.com/cesanta/...\u003c/a>\u003c/p>\u003cp>This rule is supposed to allow request the catalog,\u003cbr>but when I do:\u003cbr>curl -k https://&lt;docker_registry_ip&gt;:5000/v2/_catalog\u003cbr>it returns:\u003cbr>{\"errors\":[{\"code\":\"UNAUTHORIZED\",\"message\":\"authentication required\",\"detail\":[{\"Type\":\"registry\",\"Name\":\"catalog\",\"Action\":\"*\"}]}]}\u003c/p>\u003cp>My intention is that anonymous can cosult the catalog, or at least some logged user.\u003cbr>But it is not working.\u003c/p>\u003cp>PS: all other actions work very well, pull and push using the auth service.\u003c/p>\u003cp>Thanks.\u003c/p>","id":"2879042233","isHighlighted":false,"author":{"username":"disqus_QmVr8m144p","about":"","name":"Claudio Saavedra","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/disqus_QmVr8m144p/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2016-09-06T15:35:23","id":"221053732","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_QmVr8m144p.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/disqus_QmVr8m144p.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_QmVr8m144p.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-09-06T15:36:26","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hello, very good article. Thanks.\nI have a question.\nI added the following rule in the auth config file:\n\n  - match: {account: \"\", type: \"registry\", name: \"catalog\"}\n    actions: [\"*\"]\n    comment: \"Logged in users can query the catalog.\"\n\nI copied from the example in: https://github.com/cesanta/docker_auth/blob/master/examples/reference.yml\n\nThis rule is supposed to allow request the catalog,\nbut when I do:\ncurl -k https://\u003cdocker_registry_ip>:5000/v2/_catalog\nit returns:\n{\"errors\":[{\"code\":\"UNAUTHORIZED\",\"message\":\"authentication required\",\"detail\":[{\"Type\":\"registry\",\"Name\":\"catalog\",\"Action\":\"*\"}]}]}\n\nMy intention is that anonymous can cosult the catalog, or at least some logged user.\nBut it is not working.\n\nPS: all other actions work very well, pull and push using the auth service.\n\nThanks.","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":0,"points":0,"moderationLabels":["links"],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>You should recommend Lets Encrypt over self signed certificates\u003c/p>","id":"2604985589","isHighlighted":false,"author":{"username":"graingert","about":"","name":"Thomas Grainger","disable3rdPartyTrackers":false,"url":"http://graingert.co.uk/","isAnonymous":false,"profileUrl":"https://disqus.com/by/graingert/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fgraingert.co.uk%2F&key=q34ljSJefCFoUbLn-OhE5Q","isPrimary":true,"joinedAt":"2009-05-26T21:02:11","id":"347798","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/graingert.jpg","cache":"https://c.disquscdn.com/uploads/users/34/7798/avatar32.jpg?1479991254"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/graingert.jpg","cache":"https://c.disquscdn.com/uploads/users/34/7798/avatar92.jpg?1479991254","large":{"permalink":"https://disqus.com/api/users/avatars/graingert.jpg","cache":"https://c.disquscdn.com/uploads/users/34/7798/avatar92.jpg?1479991254"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-04-04T08:42:19","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"You should recommend Lets Encrypt over self signed certificates","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":0,"points":0,"moderationLabels":[],"isEdited":true,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Nice article! thanks\u003c/p>","id":"2322461389","isHighlighted":false,"author":{"username":"disqus_JvU5McOYUG","about":"","name":"\ubb38\uc131\ud638","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/disqus_JvU5McOYUG/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-01-19T16:20:41","id":"140183357","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_JvU5McOYUG.jpg","cache":"https://c.disquscdn.com/uploads/users/14018/3357/avatar32.jpg?1445586536"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_JvU5McOYUG.jpg","cache":"https://c.disquscdn.com/uploads/users/14018/3357/avatar92.jpg?1445586536","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_JvU5McOYUG.jpg","cache":"https://c.disquscdn.com/uploads/users/14018/3357/avatar92.jpg?1445586536"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-10-23T07:48:54","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Nice article! thanks","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hi!\u003c/p>\u003cp>Nice tutorial but I have one question!\u003c/p>\u003cp>When I try to login from 127.0.0.1 it works fine! I want to have access remotely (lets say from X.X.X.X). When I followed the instructions from the docs (\u003ca href=\"https://disq.us/url?url=https%3A%2F%2Fdocs.docker.com%2Fregistry%2Fdeploying%2F%29%3ATQII4hhF4-w4yeruzCIjR4SVCyU&amp;cuid=3304967\" rel=\"nofollow noopener\">https://docs.docker.com/reg...\u003c/a> and I added the tls certificates to the registry container, it gave me this error:\u003cbr>Error response from daemon: no successful auth challenge for https://X.X.X.X:5000/v2/ - errors: [Get https://X.X.X.X:5001/auth?account=testuser&amp;service=Docker+registry: x509: certificate signed by unknown authority (possibly because of \"crypto/rsa: verification error\" while trying to verify candidate authority certificate \"X.X.X.X\")]\u003c/p>\u003cp>I have tried this again without the auth server and it was working. Do you know what should I do in order to have access to the registry with the auth server from a remote host?!\u003c/p>","id":"2173854877","isHighlighted":false,"author":{"username":"disqus_RZ9GtPiIpp","about":"","name":"Jay","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/disqus_RZ9GtPiIpp/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-08-04T15:16:38","id":"168108865","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_RZ9GtPiIpp.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/disqus_RZ9GtPiIpp.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_RZ9GtPiIpp.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-08-04T15:34:51","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hi!\n\nNice tutorial but I have one question! \n\nWhen I try to login from 127.0.0.1 it works fine! I want to have access remotely (lets say from X.X.X.X). When I followed the instructions from the docs (https://docs.docker.com/registry/deploying/) and I added the tls certificates to the registry container, it gave me this error:\nError response from daemon: no successful auth challenge for https://X.X.X.X:5000/v2/ - errors: [Get https://X.X.X.X:5001/auth?account=testuser&service=Docker+registry: x509: certificate signed by unknown authority (possibly because of \"crypto/rsa: verification error\" while trying to verify candidate authority certificate \"X.X.X.X\")]\n\nI have tried this again without the auth server and it was working. Do you know what should I do in order to have access to the registry with the auth server from a remote host?!","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":0,"points":0,"moderationLabels":["links"],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>It worked for me by adding the certificate to /usr/local/share/ca-certificates and update the certificates (update-ca-certificates) and restart docker, but i think using --insecure-registry \u003ca href=\"http://disq.us/url?url=http%3A%2F%2Fregistry.example.com%3AFLRc9YAQ7ssTBwAlAOIRWQU_vLk&amp;cuid=3304967\" rel=\"nofollow noopener\">registry.example.com\u003c/a>:5000 should work too, read the following issue on Github for more information on this problem: \u003cbr>\u003ca href=\"https://disq.us/url?url=https%3A%2F%2Fgithub.com%2Fdocker%2Fdocker%2Fissues%2F8849%3A99DTtFB2qXOw9qzQcLIlHf0sp8E&amp;cuid=3304967\" rel=\"nofollow noopener\">https://github.com/docker/d...\u003c/a>\u003c/p>","id":"2174722219","isHighlighted":false,"author":{"username":"husseingalalahmed","about":"System Admin","name":"hussein galal ","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/husseingalalahmed/","isPowerContributor":false,"location":"ALexandria, Egypt","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-11-10T19:38:51","id":"130761916","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar32.jpg?1450189325"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325","large":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-08-04T23:19:55","parent":2173854877,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"It worked for me by adding the certificate to /usr/local/share/ca-certificates and update the certificates (update-ca-certificates) and restart docker, but i think using --insecure-registry registry.example.com:5000 should work too, read the following issue on Github for more information on this problem: \nhttps://github.com/docker/docker/issues/8849","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":1,"points":0,"moderationLabels":["links"],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>In step 2, the Www-Authenticate header is missing the scope. Is this correct?\u003cbr>In step 5/6, the docker run command has no image or app specified - I assume that is an omission?\u003c/p>","id":"2165643178","isHighlighted":false,"author":{"username":"cliffbdf","about":"","name":"cliffbdf","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/cliffbdf/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2011-06-22T16:47:08","id":"12895034","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-30T18:40:13","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"In step 2, the Www-Authenticate header is missing the scope. Is this correct?\nIn step 5/6, the docker run command has no image or app specified - I assume that is an omission?","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":0,"points":0,"moderationLabels":[],"isEdited":true,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>In step2: i didnt try to access any repository located on the registry, i just tried to access the V2 API, so there is no scope here.\u003cbr>Which docker run exactly are you asking about?\u003c/p>","id":"2165715185","isHighlighted":false,"author":{"username":"husseingalalahmed","about":"System Admin","name":"hussein galal ","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/husseingalalahmed/","isPowerContributor":false,"location":"ALexandria, Egypt","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-11-10T19:38:51","id":"130761916","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar32.jpg?1450189325"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325","large":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-30T19:18:06","parent":2165643178,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"In step2: i didnt try to access any repository located on the registry, i just tried to access the V2 API, so there is no scope here.\nWhich docker run exactly are you asking about?","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":1,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>It is probably my ignorance. Some of the docker run commands end with a yaml file instead of an app path - is that allowed? Looking at the documentation for the docker command I don't see that it is allowed. Can you please explain? Thanks!\u003c/p>","id":"2166121575","isHighlighted":false,"author":{"username":"cliffbdf","about":"","name":"cliffbdf","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/cliffbdf/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2011-06-22T16:47:08","id":"12895034","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-30T22:31:46","parent":2165715185,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"It is probably my ignorance. Some of the docker run commands end with a yaml file instead of an app path - is that allowed? Looking at the documentation for the docker command I don't see that it is allowed. Can you please explain? Thanks!","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":2,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>You must specify the Docker image in the docker run command, but i think what you are talking about here is Docker-compose (\u003ca href=\"https://disq.us/url?url=https%3A%2F%2Fdocs.docker.com%2Fcompose%2F%29%3ABYuphQR0AjM6gKygGiDtELfW_Gw&amp;cuid=3304967\" rel=\"nofollow noopener\">https://docs.docker.com/com...\u003c/a> where you can put multiple run commands in a yaml file, if that is not it please give me an example of docker run command that ends with yaml file.\u003c/p>","id":"2166225674","isHighlighted":false,"author":{"username":"husseingalalahmed","about":"System Admin","name":"hussein galal ","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/husseingalalahmed/","isPowerContributor":false,"location":"ALexandria, Egypt","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-11-10T19:38:51","id":"130761916","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar32.jpg?1450189325"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325","large":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-30T23:49:49","parent":2166121575,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"You must specify the Docker image in the docker run command, but i think what you are talking about here is Docker-compose (https://docs.docker.com/compose/) where you can put multiple run commands in a yaml file, if that is not it please give me an example of docker run command that ends with yaml file.","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":3,"points":0,"moderationLabels":["links"],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hi Hussein -\u003c/p>\u003cp>Here is one from the article:\u003c/p>\u003cp>docker run -d --name docker_auth -p 5001:5001 \\\u003cbr>-v `pwd`/auth_server/config:/config:ro \\\u003cbr>-v /var/log/docker_auth:/logs \\\u003cbr>--restart=always \\\u003cbr>-v `pwd`/auth_server/ssl:/ssl cesanta/docker_auth /config/auth_config.yml\u003c/p>\u003cp>Best regards,\u003c/p>\u003cp>Cliff\u003c/p>","id":"2166355069","isHighlighted":false,"author":{"username":"cliffbdf","about":"","name":"cliffbdf","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/cliffbdf/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2011-06-22T16:47:08","id":"12895034","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-31T01:20:32","parent":2166225674,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hi Hussein -\n\nHere is one from the article:\n\n\ndocker run -d --name docker_auth -p 5001:5001 \\\n-v `pwd`/auth_server/config:/config:ro \\\n-v /var/log/docker_auth:/logs \\\n--restart=always \\\n-v `pwd`/auth_server/ssl:/ssl cesanta/docker_auth /config/auth_config.yml\n\nBest regards,\n\nCliff","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":4,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Yeah i get now why you are confused, as you can see i specified the Docker image \"cesanta/docker_auth\" but as for the  /config/auth_config.yml this is simply a command passed to the Docker image and in this case a configuration file for the authentication server.\u003c/p>\u003cp>As an example, you can run ubuntu image with a command like this:\u003c/p>\u003cp>docker run -it ubuntu:latest /bin/bash\u003c/p>\u003cp>this means that I ran an Ubuntu image and passed \"/bin/bash\" command, please refer to the documentation for more information about CMD and ENTRYPOINT in dockerfile.\u003c/p>","id":"2166366961","isHighlighted":false,"author":{"username":"husseingalalahmed","about":"System Admin","name":"hussein galal ","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/husseingalalahmed/","isPowerContributor":false,"location":"ALexandria, Egypt","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-11-10T19:38:51","id":"130761916","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar32.jpg?1450189325"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325","large":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-31T01:31:02","parent":2166355069,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Yeah i get now why you are confused, as you can see i specified the Docker image \"cesanta/docker_auth\" but as for the  /config/auth_config.yml this is simply a command passed to the Docker image and in this case a configuration file for the authentication server.\n\nAs an example, you can run ubuntu image with a command like this:\n\ndocker run -it ubuntu:latest /bin/bash\n\n\nthis means that I ran an Ubuntu image and passed \"/bin/bash\" command, please refer to the documentation for more information about CMD and ENTRYPOINT in dockerfile.","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":5,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>Yes that explains it. Thank you!  Great article by the way! - Cliff\u003c/p>","id":"2167160580","isHighlighted":false,"author":{"username":"cliffbdf","about":"","name":"cliffbdf","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/cliffbdf/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2011-06-22T16:47:08","id":"12895034","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-31T13:37:31","parent":2166366961,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Yes that explains it. Thank you!  Great article by the way! - Cliff","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":6,"points":1,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>You are welcome, glad you like it.\u003c/p>","id":"2167162486","isHighlighted":false,"author":{"username":"husseingalalahmed","about":"System Admin","name":"hussein galal ","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/husseingalalahmed/","isPowerContributor":false,"location":"ALexandria, Egypt","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-11-10T19:38:51","id":"130761916","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar32.jpg?1450189325"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325","large":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-31T13:38:41","parent":2167160580,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"You are welcome, glad you like it.","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":7,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Hi Hussein -\u003c/p>\u003cp>Thanks for helping me the other day. I have only just got around to configuring an instance of Cesanta, and I am a little confused about the ACL settings. Specifically, since a docker image is normally identified by &lt;repository&gt;/&lt;name&gt;, how does one specify the repository in the Cesanta ACL? \u003cbr>I would have the same question for image tags.\u003c/p>\u003cp>The Cestanta examples on github state that one can use a \u201ctype\u201d attribute in the ACL, but it is a little unclear: they say that type can be \u201crepository\u201d, but I am not sure if they mean that literally type can be \u201crepository\u201d, or that one can specify the repository using type=\u201c&lt;repo-name&gt;\u201d. And it is also not clear how one would express the URL that must be presented to Cestanta. Sorry for this complicated question but I have tried many variations and have not hit on a combination that works, and the Cestanta documentation does not really explain it. Thanks! \u003cbr>Best regards,\u003c/p>\u003cp>Cliff\u003c/p>","id":"2174710801","isHighlighted":false,"author":{"username":"cliffbdf","about":"","name":"cliffbdf","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/cliffbdf/","isPowerContributor":false,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2011-06-22T16:47:08","id":"12895034","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/cliffbdf.jpg","cache":"//a.disquscdn.com/1494469450/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-08-04T23:11:34","parent":2167162486,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Hi Hussein -\n\nThanks for helping me the other day. I have only just got around to configuring an instance of Cesanta, and I am a little confused about the ACL settings. Specifically, since a docker image is normally identified by \u003crepository>/\u003cname>, how does one specify the repository in the Cesanta ACL? \nI would have the same question for image tags.\n\nThe Cestanta examples on github state that one can use a \u201ctype\u201d attribute in the ACL, but it is a little unclear: they say that type can be \u201crepository\u201d, but I am not sure if they mean that literally type can be \u201crepository\u201d, or that one can specify the repository using type=\u201c\u003crepo-name>\u201d. And it is also not clear how one would express the URL that must be presented to Cestanta. Sorry for this complicated question but I have tried many variations and have not hit on a combination that works, and the Cestanta documentation does not really explain it. Thanks! \nBest regards,\n\nCliff","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":8,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>As far as i understand from the documentation of Cestanta, they only have one one type for the \"type=\" parameter which is literally \"repository\", they suppose to add more types to the registry, but for the time being it is the only option and you  can ignore it for now.\u003c/p>","id":"2174736102","isHighlighted":false,"author":{"username":"husseingalalahmed","about":"System Admin","name":"hussein galal ","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"profileUrl":"https://disqus.com/by/husseingalalahmed/","isPowerContributor":false,"location":"ALexandria, Egypt","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-11-10T19:38:51","id":"130761916","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar32.jpg?1450189325"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325","large":{"permalink":"https://disqus.com/api/users/avatars/husseingalalahmed.jpg","cache":"https://c.disquscdn.com/uploads/users/13076/1916/avatar92.jpg?1450189325"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-08-04T23:29:53","parent":2174710801,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"As far as i understand from the documentation of Cestanta, they only have one one type for the \"type=\" parameter which is literally \"repository\", they suppose to add more types to the registry, but for the time being it is the only option and you  can ignore it for now.","canVote":false,"thread":"3935345587","forum":"binbashtheory","depth":9,"points":0,"moderationLabels":[],"isEdited":false,"sb":false}],"thread":{"feed":"https://binbashtheory.disqus.com/creating_private_docker_registry_20_with_token_authentication_service/latest.rss","identifiers":["309 http://the.binbashtheory.com/?p=309"],"dislikes":0,"likes":1,"message":"","id":"3935345587","createdAt":"2015-07-15T01:41:22","category":"3358060","author":"130761916","isSpam":false,"signedLink":"http://disq.us/?url=http%3A%2F%2Fthe.binbashtheory.com%2Fcreating-private-docker-registry-2-0-with-token-authentication-service%2F&key=lF_WH_x0D-UomcJ7Jmeb1Q","isDeleted":false,"hasStreaming":false,"raw_message":"","isClosed":false,"link":"http://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/","slug":"creating_private_docker_registry_20_with_token_authentication_service","forum":"binbashtheory","clean_title":"Creating Private Docker Registry 2.0 with Token Authentication Service","posts":18,"moderators":[130761916],"title":"Creating Private Docker Registry 2.0 with Token Authentication Service","highlightedPost":null}},"order":"popular"}</script>
+
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"https://c.disquscdn.com/next/current/embed"
+}</script>
+
+        
+        <script>!function () {
+            var d = document;
+            var toH = d.head.appendChild.bind(d.head);
+
+            var v = window.location.href.match(/[#&?]version=([0-9a-f]{32})/);
+            var src = 'https://c.disquscdn.com/next/embed/lounge.load';
+            if (v)
+                src += '.' + v[1];
+            src += '.js';
+
+            var s = d.createElement('script');
+            s.crossOrigin = 'anonymous';
+            s.id = 'bootstrap-script';
+            s.setAttribute('data-app', 'lounge');
+            s.src = src;
+            toH(s);
+
+            var m = d.createElement('meta');
+            m.setAttribute('http-equiv', 'Content-Security-Policy');
+            m.setAttribute('content', "script-src https:;");
+            toH(m);
+        }();</script>
+    
+
+
+<script src="a_data/common.js"></script><div id="layout" data-tracking-area="layout"><div id="onboard" data-tracking-area="onboard"><div></div></div><div id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post" style="display: none;"></div><div id="global-alert"></div><header id="main-nav" data-tracking-area="main-nav"><nav class="nav nav-primary"><ul><li class="nav-tab nav-tab--primary tab-conversation active" data-role="post-count"><a class="publisher-nav-color"><span class="comment-count">18 comments</span><span class="comment-count-placeholder">Comments</span></a></li><li class="nav-tab nav-tab--primary tab-community"><a href="https://disqus.com/home/forums/binbashtheory/" class="publisher-nav-color" data-action="community-sidebar" data-forum="binbashtheory" id="community-tab"><span class="community-name"><strong>binbashtheory</strong></span><strong class="community-name-placeholder">Community</strong></a></li><li class="nav-tab nav-tab--primary dropdown user-menu" data-role="logout"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+<span>
+Login
+</span>
+
+</span> <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="#" data-action="auth:google">Google</a>
+</li>
+
+
+
+</ul>
+</li><li class="nav-tab nav-tab--primary notification-menu unread" data-role="notification-menu"><a href="https://disqus.com/home/inbox/" class="notification-container" data-action="home" data-home-path="home/inbox/">
+<span class="notification-icon icon-comment" aria-hidden=""></span>
+<span class="notification-count" data-role="notification-count">1</span>
+</a>
+</li></ul></nav></header><section id="conversation" data-role="main" data-tracking-area="main"><div class="nav nav-secondary" data-tracking-area="secondary-nav"><ul><li id="recommend-button" class="nav-tab nav-tab--secondary recommend dropdown"><div class="thread-likes"><a href="#" data-action="recommend" title="Recommend this discussion" class="dropdown-toggle ">
+<span class="label label-default"><span class="recommend-icon icon-heart-empty"></span> Recommend</span>
+<span class="label label-recommended"><span class="recommend-icon icon-heart"></span> Recommended</span>
+<span class="label label-count">1</span>
+</a>
+<ul class="dropdown-menu dropdown-menu--coachmark">
+<li>
+<h2 class="coachmark__heading">Discussion Recommended!</h2>
+<p class="coachmark__description">Recommending means this is a 
+discussion worth sharing. It gets shared to your followers' Disqus 
+feeds, and gives the creator kudos!</p>
+<a href="https://disqus.com/home/?utm_source=disqus_embed&amp;utm_content=recommend_btn" class="btn btn-primary coachmark__button" target="_blank">
+ Find More Discussions 
+</a>
+</li>
+</ul>
+</div></li><li id="thread-share-menu" class="nav-tab nav-tab--secondary dropdown share-menu hidden-sm"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="icon-export"></span>
+<span class="label">Share</span>
+</a>
+<ul class="share-menu dropdown-menu">
+<li>
+<div class="share-menu__label">Share this discussion on</div>
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li><li data-role="post-sort" class="nav-tab nav-tab--secondary dropdown sorting pull-right"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sort by Best<span class="caret"></span></a><ul class="dropdown-menu pull-right"><li class="selected"><a href="#" data-action="sort" data-sort="popular">Best<i aria-hidden="true" class="icon-checkmark"></i></a></li><li class=""><a href="#" data-action="sort" data-sort="desc">Newest<i aria-hidden="true" class="icon-checkmark"></i></a></li><li class=""><a href="#" data-action="sort" data-sort="asc">Oldest<i aria-hidden="true" class="icon-checkmark"></i></a></li></ul></li></ul></div><div id="posts"><div id="form" class="textarea-wrapper--top-level"><form class="reply"><div class="postbox">
+<div role="alert"></div>
+<div class="avatar">
+<span class="user">
+<img data-role="user-avatar" src="a_data/noavatar92.png" alt="Avatar">
+</span>
+</div>
+
+<div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div class="textarea" tabindex="0" role="textbox" aria-multiline="true" data-role="editable" style="overflow: auto; overflow-wrap: break-word; max-height: 350px;" aria-label="Join the discussion…" contenteditable="true"><p><br></p></div><div style="display: none;"><ul class="user-mention__list">
+<li class="header user-mention__header">
+<h5>in this conversation</h5>
+</li>
+</ul>
+</div></div>
+<div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+<div class="drag-text">
+⬇ Drag and drop your images here to upload them.
+</div>
+</div>
+<div class="media-preview empty" data-role="media-preview"><ul data-role="media-progress-list"></ul>
+<ul data-role="media-rich-list"></ul>
+<div class="media-expanded empty" data-role="media-preview-expanded">
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-role="media-preview-expanded-image" alt="Media preview placeholder">
+</div>
+</div>
+<div class="edit-alert" role="postbox-alert"></div>
+<div class="post-actions">
+<ul class="wysiwyg">
+<li class="wysiwyg__item" data-role="media-uploader"><a href="#" tabindex="-1" data-action="attach" class="attach" title="Upload Images"><span>Attach</span></a>
+<input data-role="media-upload" tabindex="-1" accept="image/*" type="file">
+</li>
+</ul>
+</div>
+</div>
+
+<div data-role="login-form"><div><section class="auth-section logged-out">
+<div class="connect">
+<h6>Log in with</h6>
+<ul data-role="login-menu" class="services login-buttons">
+
+<li class="auth-disqus">
+<button type="button" data-action="auth:disqus" title="Disqus" class="connect__button"><i class="icon-disqus"></i></button>
+</li>
+<li class="auth-facebook">
+<button type="button" data-action="auth:facebook" title="Facebook" class="connect__button"><i class="icon-facebook-circle"></i></button>
+</li>
+<li class="auth-twitter">
+<button type="button" data-action="auth:twitter" title="Twitter" class="connect__button"><i class="icon-twitter-circle"></i></button>
+</li>
+<li class="auth-google">
+<button type="button" data-action="auth:google" title="Google" class="connect__button"><i class="icon-google-plus-circle"></i></button>
+</li>
+</ul>
+</div>
+<div class="guest">
+<h6 class="guest-form-title">
+<span class="register-text"> or sign up with Disqus </span>
+<span class="guest-text"> or pick a name </span>
+</h6>
+
+<div class="help-tooltip__wrapper help-icon">
+<div id="rules" class="tooltip show help-tooltip">
+<h3 class="help-tooltip__heading">Disqus is a discussion network</h3>
+<ul class="help-tooltip__list">
+<li><span>Disqus never moderates or censors. The rules on this community are its own.</span></li>
+<li><span>Your email is safe with us. It's only used for moderation and optional notifications.</span></li>
+<li><span>Don't be a jerk or do anything illegal. Everything is easier that way.</span></li>
+</ul>
+<p class="clearfix"><a href="https://docs.disqus.com/kb/terms-and-policies/" class="btn btn-small help-tooltip__button" target="_blank">Read full terms and conditions</a></p>
+</div>
+</div>
+
+<p class="input-wrapper">
+<input dir="auto" placeholder="Name" name="display_name" id="view54_display_name" maxlength="30" class="input--text" type="text">
+</p>
+
+<div class="guest-details " data-role="guest-details">
+<p class="input-wrapper">
+<input dir="auto" placeholder="Email" name="email" id="view54_email" class="input--text" type="email">
+</p>
+
+<p class="input-wrapper">
+<input dir="auto" class="register-text input--text" placeholder="Password" name="password" id="view54_password" type="password">
+</p>
+
+<div class="acceptance-wrapper register-text">
+By signing up, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+<div class="acceptance-wrapper guest-text">
+By posting, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+
+<input name="author-guest" style="display:none" type="checkbox">
+
+<div class="proceed" data-role="submit-btn-container">
+<button type="submit" class="proceed__button btn submit" aria-label="Next"><span class="icon-proceed"></span><div class="spinner"></div></button>
+</div>
+</div>
+</div>
+</section>
+
+</div></div>
+</div>
+</form></div><button class="alert alert--realtime" style="display: none;" data-role="realtime-notification"></button><div id="no-posts" style="display: none;"></div><ul id="post-list" class="post-list"><li class="post" id="post-3287621792"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_3dJ0FwY0YG/" class="user" data-action="profile" data-username="disqus_3dJ0FwY0YG">
+<img data-role="user-avatar" data-user="250812334" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_3dJ0FwY0YG/" data-action="profile" data-username="disqus_3dJ0FwY0YG" data-role="username">Alex Moore</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-3287621792" data-role="relative-time" class="time-ago" title="Thursday, May 4, 2017 5:08 AM">15 days ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>I have the same problem as Claudio, cannot get anonymous user to be 
+able to query the catalog. Even if I set my acl to give anonymous users 
+full access to everything:<br>  - match: {account: ""}<br>    actions: ["*"]</p><p>It still fails.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1idd57k" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:3287621792">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+</li><li class="post" id="post-3029082845"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/lewiscowles/" class="user" data-action="profile" data-username="lewiscowles">
+<img data-role="user-avatar" data-user="51258486" src="a_data/avatar92.jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/lewiscowles/" data-action="profile" data-username="lewiscowles" data-role="username">Lewis Cowles</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-3029082845" data-role="relative-time" class="time-ago" title="Thursday, December 1, 2016 12:50 PM">6 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Be careful with the --insecure-registry example. It's great for 
+testing, but with proliferation of LetsEncrypt and the idea that basic 
+SSL should be provided for free, it might be a nice time to update this.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1e3fra5" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:3029082845">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+</li><li class="post" id="post-2958025041"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_1Kox1iXjkO/" class="user" data-action="profile" data-username="disqus_1Kox1iXjkO">
+<img data-role="user-avatar" data-user="227023155" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_1Kox1iXjkO/" data-action="profile" data-username="disqus_1Kox1iXjkO" data-role="username">Hans</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2958025041" data-role="relative-time" class="time-ago" title="Wednesday, October 19, 2016 2:54 PM">7 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>I am running into some problems following this setup using the docker compose.<br>The registry and auth part are both running but when i try to log in, i get the following error:<br>&lt; HTTP/1.1 404 Not Found<br>&lt; Content-Type: text/plain; charset=utf-8<br>&lt; X-Content-Type-Options: nosniff<br>&lt; Date: Wed, 19 Oct 2016 10:18:57 GMT<br>&lt; Content-Length: 10</p><p>I have no idea why this problem keeps ocurring.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1cx4qq9" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2958025041">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+</li><li class="post" id="post-2879042233"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_QmVr8m144p/" class="user" data-action="profile" data-username="disqus_QmVr8m144p">
+<img data-role="user-avatar" data-user="221053732" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_QmVr8m144p/" data-action="profile" data-username="disqus_QmVr8m144p" data-role="username">Claudio Saavedra</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2879042233" data-role="relative-time" class="time-ago" title="Tuesday, September 6, 2016 9:06 PM">8 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Hello, very good article. Thanks.<br>I have a question.<br>I added the following rule in the auth config file:</p><p>  - match: {account: "", type: "registry", name: "catalog"}<br>    actions: ["*"]<br>    comment: "Logged in users can query the catalog."</p><p>I copied from the example in: <a href="https://disq.us/url?url=https%3A%2F%2Fgithub.com%2Fcesanta%2Fdocker_auth%2Fblob%2Fmaster%2Fexamples%2Freference.yml%3A_CPWbXNSnBvNDAy8IJUVwIjf6aE&amp;cuid=3304967" rel="nofollow noopener">https://github.com/cesanta/...</a></p><p>This rule is supposed to allow request the catalog,<br>but when I do:<br>curl -k https://&lt;docker_registry_ip&gt;:5000/v2/_catalog<br>it returns:<br>{"errors":[{"code":"UNAUTHORIZED","message":"authentication
+ 
+required","detail":[{"Type":"registry","Name":"catalog","Action":"*"}]}]}</p><p>My intention is that anonymous can cosult the catalog, or at least some logged user.<br>But it is not working.</p><p>PS: all other actions work very well, pull and push using the auth service.</p><p>Thanks.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1bm3v7d" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2879042233">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+</li><li class="post" id="post-2604985589"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/graingert/" class="user" data-action="profile" data-username="graingert">
+<img data-role="user-avatar" data-user="347798" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/graingert/" data-action="profile" data-username="graingert" data-role="username">Thomas Grainger</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2604985589" data-role="relative-time" class="time-ago" title="Monday, April 4, 2016 2:12 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>You should recommend Lets Encrypt over self signed certificates</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/172xvqt" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2604985589">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+</li><li class="post" id="post-2322461389"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_JvU5McOYUG/" class="user" data-action="profile" data-username="disqus_JvU5McOYUG">
+<img data-role="user-avatar" data-user="140183357" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_JvU5McOYUG/" data-action="profile" data-username="disqus_JvU5McOYUG" data-role="username">문성호</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2322461389" data-role="relative-time" class="time-ago" title="Friday, October 23, 2015 1:18 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Nice article! thanks</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/12eqeod" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2322461389">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+</li><li class="post" id="post-2173854877"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_RZ9GtPiIpp/" class="user" data-action="profile" data-username="disqus_RZ9GtPiIpp">
+<img data-role="user-avatar" data-user="168108865" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_RZ9GtPiIpp/" data-action="profile" data-username="disqus_RZ9GtPiIpp" data-role="username">Jay</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2173854877" data-role="relative-time" class="time-ago" title="Tuesday, August 4, 2015 9:04 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Hi!</p><p>Nice tutorial but I have one question!</p><p>When I try to 
+login from 127.0.0.1 it works fine! I want to have access remotely (lets
+ say from X.X.X.X). When I followed the instructions from the docs (<a href="https://disq.us/url?url=https%3A%2F%2Fdocs.docker.com%2Fregistry%2Fdeploying%2F%29%3ATQII4hhF4-w4yeruzCIjR4SVCyU&amp;cuid=3304967" rel="nofollow noopener">https://docs.docker.com/reg...</a> and I added the tls certificates to the registry container, it gave me this error:<br>Error
+ response from daemon: no successful auth challenge for 
+https://X.X.X.X:5000/v2/ - errors: [Get 
+https://X.X.X.X:5001/auth?account=testuser&amp;service=Docker+registry: 
+x509: certificate signed by unknown authority (possibly because of 
+"crypto/rsa: verification error" while trying to verify candidate 
+authority certificate "X.X.X.X")]</p><p>I have tried this again without 
+the auth server and it was working. Do you know what should I do in 
+order to have access to the registry with the auth server from a remote 
+host?!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/zy995p" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2173854877">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2174722219"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/husseingalalahmed/" class="user" data-action="profile" data-username="husseingalalahmed">
+<img data-role="user-avatar" data-user="130761916" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/husseingalalahmed/" data-action="profile" data-username="husseingalalahmed" data-role="username">hussein galal </a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2173854877" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Jay</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2174722219" data-role="relative-time" class="time-ago" title="Wednesday, August 5, 2015 4:49 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>It worked for me by adding the certificate to 
+/usr/local/share/ca-certificates and update the certificates 
+(update-ca-certificates) and restart docker, but i think using 
+--insecure-registry <a href="http://disq.us/url?url=http%3A%2F%2Fregistry.example.com%3AFLRc9YAQ7ssTBwAlAOIRWQU_vLk&amp;cuid=3304967" rel="nofollow noopener">registry.example.com</a>:5000 should work too, read the following issue on Github for more information on this problem: <br><a href="https://disq.us/url?url=https%3A%2F%2Fgithub.com%2Fdocker%2Fdocker%2Fissues%2F8849%3A99DTtFB2qXOw9qzQcLIlHf0sp8E&amp;cuid=3304967" rel="nofollow noopener">https://github.com/docker/d...</a></p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/zyruej" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2174722219">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+</li></ul>
+</li><li class="post" id="post-2165643178"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/cliffbdf/" class="user" data-action="profile" data-username="cliffbdf">
+<img data-role="user-avatar" data-user="12895034" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/cliffbdf/" data-action="profile" data-username="cliffbdf" data-role="username">cliffbdf</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2165643178" data-role="relative-time" class="time-ago" title="Friday, July 31, 2015 12:10 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>In step 2, the Www-Authenticate header is missing the scope. Is this correct?<br>In step 5/6, the docker run command has no image or app specified - I assume that is an omission?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ztd8yy" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2165643178">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2165715185"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/husseingalalahmed/" class="user" data-action="profile" data-username="husseingalalahmed">
+<img data-role="user-avatar" data-user="130761916" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/husseingalalahmed/" data-action="profile" data-username="husseingalalahmed" data-role="username">hussein galal </a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2165643178" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> cliffbdf</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2165715185" data-role="relative-time" class="time-ago" title="Friday, July 31, 2015 12:48 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>In step2: i didnt try to access any repository located on the 
+registry, i just tried to access the V2 API, so there is no scope here.<br>Which docker run exactly are you asking about?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ztesj5" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2165715185">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2166121575"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/cliffbdf/" class="user" data-action="profile" data-username="cliffbdf">
+<img data-role="user-avatar" data-user="12895034" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/cliffbdf/" data-action="profile" data-username="cliffbdf" data-role="username">cliffbdf</a></span>
+
+<span><a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2165715185" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> hussein galal </a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2166121575" data-role="relative-time" class="time-ago" title="Friday, July 31, 2015 4:01 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>It is probably my ignorance. Some of the docker run commands end with
+ a yaml file instead of an app path - is that allowed? Looking at the 
+documentation for the docker command I don't see that it is allowed. Can
+ you please explain? Thanks!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ztni3r" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2166121575">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2166225674"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/husseingalalahmed/" class="user" data-action="profile" data-username="husseingalalahmed">
+<img data-role="user-avatar" data-user="130761916" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/husseingalalahmed/" data-action="profile" data-username="husseingalalahmed" data-role="username">hussein galal </a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2166121575" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> cliffbdf</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2166225674" data-role="relative-time" class="time-ago" title="Friday, July 31, 2015 5:19 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>You must specify the Docker image in the docker run command, but i think what you are talking about here is Docker-compose (<a href="https://disq.us/url?url=https%3A%2F%2Fdocs.docker.com%2Fcompose%2F%29%3ABYuphQR0AjM6gKygGiDtELfW_Gw&amp;cuid=3304967" rel="nofollow noopener">https://docs.docker.com/com...</a>
+ where you can put multiple run commands in a yaml file, if that is not 
+it please give me an example of docker run command that ends with yaml 
+file.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ztpqfe" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2166225674">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2166355069"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/cliffbdf/" class="user" data-action="profile" data-username="cliffbdf">
+<img data-role="user-avatar" data-user="12895034" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/cliffbdf/" data-action="profile" data-username="cliffbdf" data-role="username">cliffbdf</a></span>
+
+<span><a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2166225674" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> hussein galal </a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2166355069" data-role="relative-time" class="time-ago" title="Friday, July 31, 2015 6:50 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Hi Hussein -</p><p>Here is one from the article:</p><p>docker run -d --name docker_auth -p 5001:5001 \<br>-v `pwd`/auth_server/config:/config:ro \<br>-v /var/log/docker_auth:/logs \<br>--restart=always \<br>-v `pwd`/auth_server/ssl:/ssl cesanta/docker_auth /config/auth_config.yml</p><p>Best regards,</p><p>Cliff</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ztsi9p" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2166355069">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2166366961"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/husseingalalahmed/" class="user" data-action="profile" data-username="husseingalalahmed">
+<img data-role="user-avatar" data-user="130761916" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/husseingalalahmed/" data-action="profile" data-username="husseingalalahmed" data-role="username">hussein galal </a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2166355069" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> cliffbdf</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2166366961" data-role="relative-time" class="time-ago" title="Friday, July 31, 2015 7:01 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Yeah i get now why you are confused, as you can see i specified the 
+Docker image "cesanta/docker_auth" but as for the  
+/config/auth_config.yml this is simply a command passed to the Docker 
+image and in this case a configuration file for the authentication 
+server.</p><p>As an example, you can run ubuntu image with a command like this:</p><p>docker run -it ubuntu:latest /bin/bash</p><p>this
+ means that I ran an Ubuntu image and passed "/bin/bash" command, please
+ refer to the documentation for more information about CMD and 
+ENTRYPOINT in dockerfile.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ztsrg1" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2166366961">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2167160580"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/cliffbdf/" class="user" data-action="profile" data-username="cliffbdf">
+<img data-role="user-avatar" data-user="12895034" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/cliffbdf/" data-action="profile" data-username="cliffbdf" data-role="username">cliffbdf</a></span>
+
+<span><a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2166366961" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> hussein galal </a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2167160580" data-role="relative-time" class="time-ago" title="Friday, July 31, 2015 7:07 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Yes that explains it. Thank you!  Great article by the way! - Cliff</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/zu9rt0" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2167160580">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2167162486"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/husseingalalahmed/" class="user" data-action="profile" data-username="husseingalalahmed">
+<img data-role="user-avatar" data-user="130761916" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/husseingalalahmed/" data-action="profile" data-username="husseingalalahmed" data-role="username">hussein galal </a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2167160580" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> cliffbdf</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2167162486" data-role="relative-time" class="time-ago" title="Friday, July 31, 2015 7:08 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>You are welcome, glad you like it.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/zu9t9y" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2167162486">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2174710801"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/cliffbdf/" class="user" data-action="profile" data-username="cliffbdf">
+<img data-role="user-avatar" data-user="12895034" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/cliffbdf/" data-action="profile" data-username="cliffbdf" data-role="username">cliffbdf</a></span>
+
+<span><a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2167162486" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> hussein galal </a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2174710801" data-role="relative-time" class="time-ago" title="Wednesday, August 5, 2015 4:41 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Hi Hussein -</p><p>Thanks for helping me the other day. I have only 
+just got around to configuring an instance of Cesanta, and I am a little
+ confused about the ACL settings. Specifically, since a docker image is 
+normally identified by &lt;repository&gt;/&lt;name&gt;, how does one 
+specify the repository in the Cesanta ACL? <br>I would have the same question for image tags.</p><p>The
+ Cestanta examples on github state that one can use a “type” attribute 
+in the ACL, but it is a little unclear: they say that type can be 
+“repository”, but I am not sure if they mean that literally type can be 
+“repository”, or that one can specify the repository using 
+type=“&lt;repo-name&gt;”. And it is also not clear how one would express
+ the URL that must be presented to Cestanta. Sorry for this complicated 
+question but I have tried many variations and have not hit on a 
+combination that works, and the Cestanta documentation does not really 
+explain it. Thanks! <br>Best regards,</p><p>Cliff</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/zyrlld" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2174710801">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2174736102"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/husseingalalahmed/" class="user" data-action="profile" data-username="husseingalalahmed">
+<img data-role="user-avatar" data-user="130761916" src="a_data/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/husseingalalahmed/" data-action="profile" data-username="husseingalalahmed" data-role="username">hussein galal </a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2174710801" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> cliffbdf</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="https://the.binbashtheory.com/creating-private-docker-registry-2-0-with-token-authentication-service/#comment-2174736102" data-role="relative-time" class="time-ago" title="Wednesday, August 5, 2015 4:59 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>As far as i understand from the documentation of Cestanta, they only 
+have one one type for the "type=" parameter which is literally 
+"repository", they suppose to add more types to the registry, but for 
+the time being it is the only option and you  can ignore it for now.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/zys546" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2174736102">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul><div class="load-more" data-role="more" style="display: none;"><a href="#" data-action="more-posts" class="btn load-more__button">Load more comments</a></div></div></section><div id="placement-bottom" data-tracking-area="discovery-south"><div class="post-list" style="height: auto; visibility: visible;"><div style="display: block; width: 100%;"><div id="discovery-main-c116" class="discovery-main">
+
+<section id="col-organic-c139" class="col-organic">
+<header class="discovery-col-header">
+<h2>Also on <strong>binbashtheory</strong>
+</h2>
+</header>
+<ul class="discovery-posts" data-role="discovery-posts"><li class="discovery-post post-0" id="discovery-link-organic-3321022391">
+<a href="http://disq.us/url?url=http%3A%2F%2Fthe.binbashtheory.com%2Fusing-overlayfs-with-lxc%2F%3ANNwWbcTR1U46FFZbeyxZA2urOIo&amp;imp=4klc5fe3og1o5t&amp;prev_imp=4kkg3atr4473u&amp;forum_id=3304967&amp;forum=binbashtheory&amp;thread_id=3935345587&amp;thread=3321022391&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=3321022391" class="publisher-anchor-color">
+
+<header class="discovery-post-header">
+<h3 title="Using Overlayfs With LXC">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Using Overlayfs With LXC
+</span>
+</h3>
+
+<ul class="meta">
+<li class="comments">
+7 comments
+</li>
+<li class="time">2 years ago</li>
+</ul>
+</header>
+
+</a><a href="http://disq.us/url?url=http%3A%2F%2Fthe.binbashtheory.com%2Fusing-overlayfs-with-lxc%2F%3ANNwWbcTR1U46FFZbeyxZA2urOIo&amp;imp=4klc5fe3og1o5t&amp;prev_imp=4kkg3atr4473u&amp;forum_id=3304967&amp;forum=binbashtheory&amp;thread_id=3935345587&amp;thread=3321022391&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=3321022391" class="top-comment" data-role="discovery-top-comment">
+<img alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">Hong</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">I
+ am using Centos 7.2 with kernel 3.10.0. I know overlayfs is a mainline 
+at kernel 3.18.0. Is there any restrictions with Centos 7.2? I want to 
+use lxc with overlay.</span></p>
+</a>
+
+</li>
+<li class="discovery-post post-1" id="discovery-link-organic-3321021125">
+<a href="http://disq.us/url?url=http%3A%2F%2Fthe.binbashtheory.com%2Fbuilding-php-application-with-docker%2F%3AiuTerF5BrdTWV4HMWbxLChcZRbQ&amp;imp=4klc5fe3og1o5t&amp;prev_imp=4kkg3atr4473u&amp;forum_id=3304967&amp;forum=binbashtheory&amp;thread_id=3935345587&amp;thread=3321021125&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=3321021125" class="publisher-anchor-color">
+
+<header class="discovery-post-header">
+<h3 title="Building PHP Application With Docker">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Building PHP Application With Docker
+</span>
+</h3>
+
+<ul class="meta">
+<li class="comments">
+3 comments
+</li>
+<li class="time">2 years ago</li>
+</ul>
+</header>
+
+</a><a href="http://disq.us/url?url=http%3A%2F%2Fthe.binbashtheory.com%2Fbuilding-php-application-with-docker%2F%3AiuTerF5BrdTWV4HMWbxLChcZRbQ&amp;imp=4klc5fe3og1o5t&amp;prev_imp=4kkg3atr4473u&amp;forum_id=3304967&amp;forum=binbashtheory&amp;thread_id=3935345587&amp;thread=3321021125&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=3321021125" class="top-comment" data-role="discovery-top-comment">
+<img alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">SumantaGhosh</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">In your tutorial lots of bug.Like you #touch config/nginx.conf but in Docker file you use 'conf' like</span></p>
+</a>
+
+</li>
+</ul>
+</section>
+
+</div>
+</div></div></div><div id="footer" data-tracking-area="footer" class="disqus-footer__wrapper"><ul class="disqus-footer"><li class="disqus-footer__logo"><a href="https://disqus.com/" rel="nofollow" title="Powered by Disqus" class="disqus-footer__link">Powered by Disqus</a></li><li id="thread-subscribe-button" class="email disqus-footer__item"><div class="default"><a href="#" rel="nofollow" data-action="subscribe" title="Subscribe and get email updates from this discussion" class="disqus-footer__link"><i aria-hidden="true" class="icon icon-mail"></i><span class="clip">Subscribe</span><i aria-hidden="true" class="icon icon-checkmark"></i></a></div><div class="form"><div class="input-wrapper"><input id="thread-subscribe-email" placeholder="yourname@email.com" class="disqus-footer__input input--text" type="email"></div></div></li><li class="install disqus-footer__item"><a href="https://publishers.disqus.com/engage?utm_source=binbashtheory&amp;utm_medium=Disqus-Footer" rel="nofollow" target="_blank" class="disqus-footer__link"><i aria-hidden="true" class="icon icon-disqus"></i><span class="clip hidden-sm">Add Disqus to your site</span><span class="clip visible-sm hidden-xs">Add Disqus</span><span class="clip visible-xs">Add</span></a></li><li class="privacy disqus-footer__item"><a href="https://help.disqus.com/customer/portal/articles/1657951?utm_source=disqus&amp;utm_medium=embed-footer&amp;utm_content=privacy-btn" rel="nofollow" target="_blank" class="disqus-footer__link"><i aria-hidden="true" class="icon icon-lock"></i><span class="clip">Privacy</span></a></li></ul></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="a_data/JtmcTFxyLye.html" frameborder="0"></iframe></div></div></div><iframe style="position: absolute; width: 1px; height: 1px; left: -9999px; display: none;" aria-hidden="true" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" src="a_data/iframe.html"></iframe><img style="display: none;" src="a_data/23096.gif"><img style="display: none;" src="a_data/a.html"><img style="display: none;" src="a_data/tpidc3int9bg2nm1hod.gif"><img style="display: none;" src="a_data/a.gif"><iframe style="display: none;" src="a_data/sync.html"></iframe></body></html>

@@ -1,0 +1,20 @@
+
+query >>
+
+curl -v -k  https://user:password@roi.dockerregistry.local:5000/v2/<<name>>/tags/list
+
+
+
+
+to check repos >>
+
+curl -v -k http://vivasa:vivasa123@localhost:9999/v2/_catalog
+
+from the above command we will get the repo name (eg :: test)
+
+
+to check tages for images >>
+
+curl -v -k http://vivasa:vivasa123@localhost:9999/v2/test/tags/list
+
+

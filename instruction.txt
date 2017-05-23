@@ -2,19 +2,6 @@
 Docker registry info >>
 ===========================================
 
-	domain   :: dh.vivasa.in
-
-admin user ::
-
-	username :: vivasa
-	password :: vivasaadmin
-
-readonly user ::
-
-   username :: mesaforte
-   password :: mesaforteuser
-
-
 push and pull prot :: 5000
 query port         :: 5002
 

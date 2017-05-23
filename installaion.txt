@@ -78,24 +78,24 @@ token:  # Settings for the tokens.
 
 users:
   # Password is specified as a BCrypt hash. Use htpasswd -B to generate.
-  "vivasa":
-    password: "$2y$05$UwWlP6msTsfDR22IjWe2FezBQHVUuy3qTfLc6ERRBSzVybSInXXYm"
+  "USER1":
+    password: "$2y$05$UwW6msTsfDR22IjWe2FezBQHy3qTfLc6ERRBSzVybSInXXYm"
   "mesaforte":
-    password: "$2y$05$AmyQL493tba856Y0qZ4oAuj5ueQsT1RVvwOBnjuc0wFs/8IHbrXNK"
+    USER2: "$2y$05$AmL493tb56Y0qZ4oAuj5ueQsT1RVvnjuc0wFs/8IHbrXNK"
   "": {}  # Allow anonymous (no "docker login") access.
 
 acl:
   # Admin has full access to everything.
-  - match: {account: "vivasa"}
+  - match: {account: "USER1"}
     actions: ["*"]
   # User "mesaforte" has pull access.
-  - match: {account: "mesaforte"}
+  - match: {account: "USER2"}
     actions: ["pull"]
 #  # All logged in users can pull all images.
 #  - match: {account: "/.+/"}
 #    actions: ["pull"]
 #  # Admin can query the catalog.
-#  - match: {account: "vivasa", type: "repository", name: "testing"}
+#  - match: {account: "USER1", type: "repository", name: "TAG_NAME"}
 #    actions: ["*"]
 
 
@@ -112,7 +112,7 @@ under "/docker_registry/auth" need htpasswd
 ==========================================================
 (Password is specified as a BCrypt hash. Use htpasswd -B to generate)
 
-htpasswd -cB htpasswd vivasa
+htpasswd -cB htpasswd USER1
 (i provided the same name as in 'auth_config.yml' who has admin power)
 
 htpasswd
